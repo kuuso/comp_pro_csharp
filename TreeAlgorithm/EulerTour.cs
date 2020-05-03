@@ -89,9 +89,12 @@ class Test {
 		int root = 0;
 		var eulerIO = Alg.EulerTourOrderIO(E, root);
 		Console.WriteLine("eulerIO: \n{0}",String.Join(" ", eulerIO));
+		// in and out only
+		//   [0, 10, 11, 11, 10, 7, 8, 9, 9, 8, 7, 1, 2, 5, 6, 6, 5, 3, 4, 4, 3, 2, 1, 0]
 		
 		var eulerWandering = Alg.EulerTourOrderWandering(E, root);
 		Console.WriteLine("eulerWandering: \n{0}",String.Join(" ", eulerWandering));
-		
+		// wandering 1 by 1
+		//   [0, 10, 11, 10, 0, 7, 8, 9, 8, 7, 0, 1, 2, 5, 6, 5, 2, 3, 4, 3, 2, 1, 0]		
 	}
 }
