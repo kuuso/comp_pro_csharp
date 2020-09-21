@@ -156,7 +156,7 @@ class MyMath{
 	public static BI ModPow(BI a, BI t, BI mod){
 		BI ret = 1;
 		while(t > 0){
-			if((t & 1) == 1){ret *= a; ret %= mod;};
+			if((t & 1) == 1){ret *= a; ret %= mod;}
 			a = a * a; a %= mod;
 			t>>=1;
 		}
@@ -249,23 +249,29 @@ class Test{
 
 /*
 testcase: 999381247093216751 :
- instantiation: 54[ms] :
- factorization: 49[ms] :
+ instantiation: 51[ms] :
+ factorization: 47[ms] :
  result: 999381247093216751 = 999665081 * 999716071
 
 testcase: 1000000016000000063 :
- instantiation: 50[ms] :
+ instantiation: 48[ms] :
  factorization: 79[ms] :
  result: 1000000016000000063 = 1000000007 * 1000000009
 
 testcase: 2305843009213693951 :
- instantiation: 50[ms] :
+ instantiation: 48[ms] :
  factorization: 20[ms] :
  result: 2305843009213693951 = 2305843009213693951
 
 testcase: 2305843009213693952 :
- instantiation: 52[ms] :
- factorization: 9[ms] :
+ instantiation: 48[ms] :
+ factorization: 10[ms] :
  result: 2305843009213693952 = 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2
+
+testcase: 1 :
+ instantiation: 50[ms] :
+ factorization: 0[ms] :
+ result: 1 = 1
+
 */	
 
