@@ -35,7 +35,7 @@ public class Factorization{
 		if(x == 1) return new Dictionary<BI, int>();
 		if(x < TrialDivLimit) return FactorizeByTrial(x);
 		if(x < SieveDivLimit) return FactorizeBySieve(x);
-		return ProbalbityFactorize(x);
+		return ProbabilisticFactorize(x);
 	}
 	
 	public Dictionary<BI, int> FactorizeByTrial(BI x){
@@ -65,7 +65,7 @@ public class Factorization{
 		return ret;
 	}
 	
-	public Dictionary<BI, int> ProbalbityFactorize(BI x){
+	public Dictionary<BI, int> ProbabilisticFactorize(BI x){
 		var ret = new Dictionary<BI, int>();
 		foreach(var p in Primes){
 			if(x % p != 0) continue;
